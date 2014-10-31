@@ -1,0 +1,2 @@
+<div class="copyright"><span style="float: left;">&copy; 2013-2014 WEME</span><span style="float: right;font-size:15px"><a href="#" style="color:#5e7fd2">了解更多</a> | <a href="#" style="color:#5e7fd2">联系我们</a></span></div>
+{literal}<script type=text/javascript>/*<![CDATA[*/$(document).ready(function(){$("a[rel^='colorbox']").colorbox({title:" ",slideshow:true,slideshowAuto:false,previous:"上一张",next:"下一张",close:"关闭",slideshowStart:"播放",slideshowStop:"暂停",current:"第 {current} 张 (共{total}张)"})});/*]]>*/</script>	{/literal}
