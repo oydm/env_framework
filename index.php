@@ -5,8 +5,10 @@ define('WEB_ROOT', dirname(__FILE__));
 	 * configure 
 	 **************************/
 	require __DIR__ . '/env/env.php';
-	//env()->db0 = new \env\db\mysql_pdo("127.0.0.1", 3306, "root", "123456", "db_weme_sdk");
-	env()->db0 = new \env\db\mysqli("127.0.0.1", 3306, "root", "123456", "db_weme_sdk");
+	/*mysql_pdo */
+  //env()->db0 = new \env\db\mysql_pdo("127.0.0.1", 3306, "root", "123456", "db_weme_sdk");
+	/*mysqli*/
+  env()->db0 = new \env\db\mysqli("127.0.0.1", 3306, "root", "123456", "db_weme_sdk");
 	//env()->db0 = new \env\db\csvdb("/data/csv");
 
 	//env()->cache0 = new \env\hash\memcached("127.0.0.1", 3307);
@@ -37,7 +39,8 @@ define('WEB_ROOT', dirname(__FILE__));
 		default:
 			{env()->stdin = new \env\hash\console(); break;}
 	}
-	env()->stderr = new \env\stream\echo_output("json");
+	/*global set namespace*/
+  env()->stderr = new \env\stream\echo_output("json");
 	env()->cookie = new \env\hash\cookie();
 	env()->session = new \env\hash\session();
 	env()->router->explain($_SERVER['REQUEST_URI'], $module_path, $output);
